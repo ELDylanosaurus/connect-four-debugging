@@ -112,8 +112,8 @@ export class Board {
     for (let i = r, j = c; i >= 0 && j < this.fields[0].length; i--, j++) {
       rising.push(this.fields[i][j]);
     }
-    for (let i = r, j = c; i < this.fields.length && j >= 0; i++, j--) {
-      rising.push(this.fields[i][j]);
+    for (let i = r + 1, j = c - 1; i < this.fields.length && j >= 0; i++, j--) {
+      rising.push(this.fields[i][j])
     }
     for (
       let i = r, j = c;
@@ -122,8 +122,8 @@ export class Board {
     ) {
       falling.push(this.fields[i][j]);
     }
-    for (let i = r, j = c; i >= 0 && j >= 0; i--, j--) {
-      falling.push(this.fields[i][i]);
+    for (let i = r - 1, j = c - 1; i >= 0 && j >= 0; i--, j--) {
+      falling.push(this.fields[i][j])
     }
     return [rising.join(""), falling.join("")];
   }
