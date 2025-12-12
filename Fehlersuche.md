@@ -20,7 +20,7 @@
 - Horizontal und vertikal nutzen `getRow` und `getCol` und suchen nach `player.repeat(4)`.
 - Verdacht: Fehler in `diagonalWinner` oder `getDiagonals`.
 
-### 3) Ursache
+### 3) Ursache und beheben
 - In `getDiagonals` ist im letzten Loop ein falscher Index verwendet:
 
   falling.push(this.fields[i][i])
